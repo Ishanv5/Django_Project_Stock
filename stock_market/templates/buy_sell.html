@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Portal</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.tailwindcss.com"></script>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+        <style>
+         
+          *{
+            
+            background-color:aqua;
+            color:black;
+            font-size:20px;
+            text-align:center;
+          }
+          .row{
+            margin-right:-187px;
+            margin-left:384px;
+          }
+          h2{
+            background-color:black;
+            color:white;
+          }
+          .btn btn-primary{
+            background-color:black;
+            color:white;
+          }
+          </style>
+
+      
+        <script type="text/javascript">
+          (function(d, m){
+              var kommunicateSettings = 
+                  {"appId":"5caaf49d6ea5da8eac7f1a65fe00668d","popupWidget":true,"automaticChatOpenOnNavigation":true};
+              var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+              s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+              var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+              window.kommunicate = m; m._globals = kommunicateSettings;
+          })(document, window.kommunicate || {});
+      /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+      </script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <style>
+       
+        
+        
+        </style>
+      
+    </head>
+    <body>
+        <header class="text-gray-400 bg-gray-900 body-font">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+              <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-500 rounded-full" viewBox="0 0 24 24">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">STOCKZ</span>
+              </a>
+              <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-white" href="portal.html">PortFolio</a>
+                
+                <a class="mr-5 hover:text-white" href="buy_sell.html">Buy/Sell</a>
+                <a class="mr-5 hover:text-white" href="account.html">Account</a>
+              </nav>
+            </div>
+          </header>
+          <center>
+            <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <h2>Buy Stocks</h2>
+                <br/>
+                <form method="post" action="{% url 'save_stock'  %}">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <label for="stock-symbol">Stock Symbol</label>
+                    <input type="text" class="form-control" id="stock_symbol" name="stock_symbol" placeholder="Enter stock symbol">
+                  </div>
+                  <div class="form-group">
+                    <label for="stock-symbol">Stock Price</label>
+                    <input type="number" class="form-control" id="stock_price" name="stock_price" placeholder="Enter stock price in INR"> 
+                  </div>
+                  <div class="form-group">
+                    <label for="number-of-shares">Number of Shares</label>
+                    <input type="number" class="form-control" id="number_of_shares" name="number_of_shares" placeholder="Enter number of shares">
+                  </div>
+                  <a href="payment.html"><button type="submit" class="btn btn-primary">Buy</button></a>
+                </form>
+              
+              
+             
+            </div>
+          </center>
+          </div>
+          
+        
+
+              
+            
+        
+        <script src="" async defer></script>
+    </body>
+</html>
